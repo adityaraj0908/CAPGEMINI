@@ -1,0 +1,2 @@
+ain__":
+    unittest.main()
