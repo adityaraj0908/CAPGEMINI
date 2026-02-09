@@ -1,0 +1,15 @@
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(50), unique=True, index=True, nullable=False)
+    password = Column(String(128), nullable=False)  
+class User(Base):
+    __tablename__ = "Project"
+    id = Column(Integer,primary_key = True, index = True)
+    project_name = Column(String(50),nullable=False)
+    project_cost = Column(Integer,nullable=False)
